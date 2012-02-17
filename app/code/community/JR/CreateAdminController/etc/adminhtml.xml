@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <menu>
+        <mycustomtab module="jr_createadmincontroller" translate="title">
+            <title>My Custom Tab</title>
+            <sort_order>100</sort_order>
+            <children>
+                <index module="jr_createadmincontroller" translate="title">
+                    <title>Index Action</title>
+                    <sort_order>1</sort_order>
+                    <action>adminhtml/custom</action>
+                </index>
+                <list module="jr_createadmincontroller" translate="title">
+                    <title>List Action</title>
+                    <sort_order>2</sort_order>
+                    <action>adminhtml/custom/list</action>
+                </list>
+            </children>
+        </mycustomtab>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <custom translate="title" module="jr_createadmincontroller">
+                        <title>My Controller</title>
+                        <sort_order>-100</sort_order>
+                        <children>
+                            <index translate="title">
+                                <title>Index Action</title>
+                                <sort_order>1</sort_order>
+                            </index>
+                            <list translate="title">
+                                <title>List Action</title>
+                                <sort_order>2</sort_order>
+                            </list>
+                        </children>
+                    </custom>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

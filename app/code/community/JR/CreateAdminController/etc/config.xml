@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <JR_CreateAdminController>
+            <version>1.0.0</version>
+        </JR_CreateAdminController>
+    </modules>
+    <global>
+        <helpers>
+            <jr_createadmincontroller>
+                <!-- Helper definition needed by Magento -->
+                <class>Mage_Core_Helper</class>
+            </jr_createadmincontroller>
+        </helpers>
+    </global>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <foo_bar before="Mage_Adminhtml">JR_CreateAdminController_Adminhtml</foo_bar>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+</config>
